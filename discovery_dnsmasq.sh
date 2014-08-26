@@ -36,8 +36,7 @@ old_macs=()
 while [ $RUN_DISCOVERY == "True" ] ; do
     refresh_macs
     if  [[ "${new_macs[@]}" = "${old_macs[@]}" ]] ; then
-        debug_msg "MACS same, sleeping 10"
-	sleep 10;
+	sleep $poll_interval;
 	source discovery_dnsmasq_conf
     else
 	debug_msg "Rewriting hosts file, SIGHUP"
