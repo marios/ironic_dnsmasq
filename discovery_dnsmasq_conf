@@ -1,0 +1,10 @@
+ROOT=/etc/discovery_dnsmasq_conf
+RUN_DISCOVERY=True
+host_file=$ROOT/host_file
+dnsmasq_conf=$ROOT/dnsmasq.conf
+interface=br-ctlplane
+pid_file=$ROOT/discovery_dnsmasq_pid
+stackrc_location=~/stackrc
+debug=1
+source $stackrc_location
+
