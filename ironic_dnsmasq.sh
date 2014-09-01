@@ -56,14 +56,14 @@ dnsmasq_cmd="dnsmasq --no-hosts --no-resolv --strict-order --bind-interfaces
                 --dhcp-hostsfile=$host_file --leasefile-ro
                 --pid-file=$pid_file"
 
-debug_msg "Starting dnsmasq like: $dnsmasq_cmd"
-$dnsmasq_cmd
+debug_msg "Starting **SUDO** dnsmasq like: sudo $dnsmasq_cmd"
+sudo $dnsmasq_cmd
 export old_node_list=()
 while [ $RUN_DISCOVERY == "True" ] ; do
     refresh_node_list
     if [[ "${node_list[@]}" = "${old_node_list[@]}" ]] ; then
         sleep $poll_interval;
-        source discovery_dnsmasq_conf
+        source ironic_dnsmasq_conf
     else
         refresh_macs
         update_host_file
@@ -74,5 +74,5 @@ done
 #cleanup
 pid=$(cat $pid_file)
 debug_msg "Shutdown... kill -9 dnsmasq @ $pid"
-kill -9 $pid
+sudo kill -9 $pid
 
