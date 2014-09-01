@@ -4,6 +4,8 @@
 # loop while true
 # get list of ironic ports. if change, add entry to hosts file, sighup.
 
+set -e
+
 source ironic_dnsmasq_conf
 
 # rudimentary logging/debug. You can change 'echo' to whatever
