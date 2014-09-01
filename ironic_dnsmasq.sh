@@ -42,7 +42,7 @@ function update_host_file() {
 function sighup_dnsmasq {
     pid=$(cat $pid_file)
     debug_msg "Sending sighup to dnsmasq @ $pid"
-    kill -1 $pid
+    sudo kill -1 $pid
 }
 
 #get list of node MACs, write ignore file, start dnsmasq:
