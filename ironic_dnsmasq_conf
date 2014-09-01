@@ -1,7 +1,7 @@
-ROOT=/home/stack/ironic_dnsmasq/ironic_dnsmasq_conf
+ROOT=/home/stack/ironic_dnsmasq
 RUN_DISCOVERY=True
 host_file=$ROOT/host_file
-dnsmasq_conf=$ROOT/dnsmasq.conf
+dnsmasq_conf=$ROOT/example_dnsmasq.conf
 interface=br-ctlplane
 pid_file=$ROOT/ironic_dnsmasq_pid
 poll_interval=10
