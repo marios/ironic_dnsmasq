@@ -1,11 +1,19 @@
+# The ROOT for the checkout, sets location for host_file and pid_file:
 ROOT=/home/stack/ironic_dnsmasq
+# Set this to False to kill discovery dnsmasq:
 RUN_DISCOVERY=True
+# Location/name of host_file, may not want/need to change this:
 host_file=$ROOT/host_file
+# Which config file to use for dnsmasq, default points at #1 above:
 dnsmasq_conf=$ROOT/example_dnsmasq.conf
+# Which interface to attach discovery dnsmasq process to
 interface=br-ctlplane
+# File to be used for pid of discovery dnsmasq process:
 pid_file=$ROOT/ironic_dnsmasq_pid
+# How often to poll Ironic, in seconds, for the hosts list
 poll_interval=10
+# OpenStack credentials file
 stackrc_location=~/stackrc
+# Whether to print debug messages
 debug=1
 source $stackrc_location
-

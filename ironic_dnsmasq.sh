@@ -7,6 +7,7 @@
 set -e
 
 source ironic_dnsmasq_conf
+source $stackrc_location
 
 # rudimentary logging/debug. You can change 'echo' to whatever
 function debug_msg {
