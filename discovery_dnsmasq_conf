@@ -1,9 +1,9 @@
-ROOT=/etc/discovery_dnsmasq_conf
+ROOT=/home/stack/ironic_dnsmasq/ironic_dnsmasq_conf
 RUN_DISCOVERY=True
 host_file=$ROOT/host_file
 dnsmasq_conf=$ROOT/dnsmasq.conf
 interface=br-ctlplane
-pid_file=$ROOT/discovery_dnsmasq_pid
+pid_file=$ROOT/ironic_dnsmasq_pid
 poll_interval=10
 stackrc_location=~/stackrc
 debug=1
