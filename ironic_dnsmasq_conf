@@ -16,4 +16,3 @@ poll_interval=10
 stackrc_location=~/stackrc
 # Whether to print debug messages
 debug=1
-source $stackrc_location
